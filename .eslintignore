@@ -1,0 +1,15 @@
+node_modules/
+
+ios/
+android/
+
+assets/
+
+.vscode/
+
+.expo-shared/
+.expo/
+expo-env.d.ts
+
+package-lock.json
+package.json

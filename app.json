@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "react-native-fundamentals-demo",
+    "slug": "react-native-fundamentals-demo",
+    "scheme": "react-native-fundamentals-demo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/react-native-fundamentals-logo.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/react-native-fundamentals-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dragan14.rnfundamentalsdemo"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/react-native-fundamentals-logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.dragan14.rnfundamentalsdemo"
+    },
+    "web": {
+      "favicon": "./assets/react-native-fundamentals-logo.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/react-native-fundamentals-logo.png",
+          "backgroundColor": "#fbfcff",
+          "dark": {
+            "image": "./assets/react-native-fundamentals-logo.png",
+            "backgroundColor": "#1a1c1e"
+          },
+          "imageWidth": 200,
+          "resizeMode": "contain"
+        }
+      ]
+    ]
+  }
+}
