@@ -8,12 +8,17 @@ import { CircleCheckBig } from "lucide-react-native";
 import { CircleUser } from "lucide-react-native";
 import { Pencil } from "lucide-react-native";
 import { CircleX } from "lucide-react-native";
+import { Eye } from "lucide-react-native";
+import { EyeOff } from "lucide-react-native";
+import { Lock } from "lucide-react-native";
 
 export default function TextInputScreen() {
   const [value, setValue] = useState("");
   const [value2, setValue2] = useState("");
   const [value3, setValue3] = useState("");
   const [isEditing, setIsEditing] = useState(false);
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <SafeAreaView disableTopSafeArea={true}>
@@ -177,7 +182,7 @@ export default function TextInputScreen() {
           <TextInput
             value={value2}
             onChangeText={setValue2}
-            placeholder={value2 || "Enter your name"}
+            placeholder={value2 || "Click the pencil icon to edit"}
             variant="outlined"
             disabled={!isEditing}
             retainErrorMessageSpace={false}
@@ -206,6 +211,31 @@ export default function TextInputScreen() {
                   }}
                 />
               ) : undefined
+            }
+          />
+          <TextInput
+            value={password}
+            onChangeText={setPassword}
+            placeholder="Enter your password"
+            variant="outlined"
+            topLabel="Password"
+            retainErrorMessageSpace={false}
+            secureTextEntry={!showPassword}
+            leftIcon={<Lock />}
+            rightIcon={
+              showPassword ? (
+                <EyeOff
+                  onPress={() => {
+                    setShowPassword(false);
+                  }}
+                />
+              ) : (
+                <Eye
+                  onPress={() => {
+                    setShowPassword(true);
+                  }}
+                />
+              )
             }
           />
         </View>
