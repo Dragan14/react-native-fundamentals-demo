@@ -1,10 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import { Stack } from "expo-router";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { ThemeProvider, useTheme } from "@/context/ThemeContext";
-import { ToastProvider } from "@/context/ToastContext";
+import { ThemeProvider, useTheme } from "@/context/ui/ThemeContext";
+import { ToastProvider } from "@/context/ui/ToastContext";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { AlertProvider } from "@/context/AlertContext";
+import { AlertProvider } from "@/context/ui/AlertContext";
 
 function App() {
   const { theme, isDark } = useTheme();

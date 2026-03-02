@@ -4,7 +4,7 @@ import SafeAreaView from "@/components/ui/SafeAreaView";
 import View from "@/components/ui/View";
 import Text from "@/components/ui/Text";
 import Button from "@/components/ui/Button";
-import { useAlert } from "@/context/AlertContext";
+import { useAlert } from "@/context/ui/AlertContext";
 
 export default function AlertScreen() {
   const { showAlert, hideAlert } = useAlert();

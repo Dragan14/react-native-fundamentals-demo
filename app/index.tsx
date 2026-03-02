@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 import Text from "@/components/ui/Text";
 import View from "@/components/ui/View";
 import RadioButton from "@/components/ui/RadioButton";
-import { useTheme } from "@/context/ThemeContext";
+import { useTheme } from "@/context/ui/ThemeContext";
 
 export default function Home() {
   const { themeMode, setThemeMode } = useTheme();

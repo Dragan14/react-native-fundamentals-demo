@@ -3,7 +3,7 @@ import SafeAreaView from "@/components/ui/SafeAreaView";
 import View from "@/components/ui/View";
 import Text from "@/components/ui/Text";
 import Button from "@/components/ui/Button";
-import { useToast } from "@/context/ToastContext";
+import { useToast } from "@/context/ui/ToastContext";
 import { Camera, PersonStanding, XCircle } from "lucide-react-native";
 
 export default function ToastScreen() {
