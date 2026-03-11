@@ -121,15 +121,36 @@ export default function TextInputScreen() {
             rightIcon={<CircleCheckBig />}
             retainErrorMessageSpace={false}
           />
+          <TextInput
+            placeholder="solid"
+            variant="solid"
+            leftLabel="Left Label"
+            leftIcon={<CircleUser />}
+            rightIcon={<CircleCheckBig />}
+            retainErrorMessageSpace={false}
+          />
+          <TextInput
+            placeholder="clear"
+            variant="clear"
+            leftIcon={<CircleUser />}
+            rightIcon={<CircleCheckBig />}
+            retainErrorMessageSpace={false}
+          />
         </View>
-        <View style={{ gap: 10, width: 350 }}>
+        <View style={{ width: 350 }}>
           <Text
             style={{ textAlign: "center", fontWeight: "bold", fontSize: 18 }}
           >
             Additional Properties
           </Text>
           <Text
-            style={{ textAlign: "center", fontWeight: "500", fontSize: 14 }}
+            style={{
+              textAlign: "center",
+              fontWeight: "500",
+              fontSize: 14,
+              marginTop: 10,
+              marginBottom: 5,
+            }}
           >
             Disabled
           </Text>
@@ -140,7 +161,13 @@ export default function TextInputScreen() {
             retainErrorMessageSpace={false}
           />
           <Text
-            style={{ textAlign: "center", fontWeight: "500", fontSize: 14 }}
+            style={{
+              textAlign: "center",
+              fontWeight: "500",
+              fontSize: 14,
+              marginTop: 10,
+              marginBottom: 5,
+            }}
           >
             Error Message
           </Text>
@@ -151,7 +178,13 @@ export default function TextInputScreen() {
             errorMessage="This is an error message"
           />
           <Text
-            style={{ textAlign: "center", fontWeight: "500", fontSize: 14 }}
+            style={{
+              textAlign: "center",
+              fontWeight: "500",
+              fontSize: 14,
+              marginTop: 10,
+              marginBottom: 5,
+            }}
           >
             Character Counter
           </Text>
@@ -182,7 +215,11 @@ export default function TextInputScreen() {
           <TextInput
             value={value2}
             onChangeText={setValue2}
-            placeholder={value2 || "Click the pencil icon to edit"}
+            placeholder={
+              value2 || !isEditing
+                ? "Click the pencil to edit"
+                : "Click \u2713 to save and \u2715 to clear"
+            }
             variant="outlined"
             disabled={!isEditing}
             retainErrorMessageSpace={false}

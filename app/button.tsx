@@ -130,6 +130,13 @@ export default function ButtonScreen() {
             Customisation Example
           </Text>
           <Button
+            variant="secondary"
+            elevated={true}
+            style={{ marginHorizontal: "auto" }}
+          >
+            Shrunken Button
+          </Button>
+          <Button
             outlined={true}
             rightIcon={<Camera />}
             rounded={true}
