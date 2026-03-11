@@ -4,6 +4,7 @@ import SafeAreaView from "@/components/ui/SafeAreaView";
 import View from "@/components/ui/View";
 import Text from "@/components/ui/Text";
 import RadioButton from "@/components/ui/RadioButton";
+import { PersonStanding } from "lucide-react-native";
 
 export default function RadioButtonScreen() {
   const [groupValue, setGroupValue] = useState<string | null>("optionA");
@@ -45,6 +46,7 @@ export default function RadioButtonScreen() {
             label="Option C"
             value={groupValue === "optionC"}
             onValueChange={() => handleGroupChange("optionC")}
+            icon={<PersonStanding />}
           />
           <RadioButton
             label="Disabled Unselected"

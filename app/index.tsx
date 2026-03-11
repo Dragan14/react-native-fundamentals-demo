@@ -6,6 +6,7 @@ import Text from "@/components/ui/Text";
 import View from "@/components/ui/View";
 import RadioButton from "@/components/ui/RadioButton";
 import { useTheme } from "@/context/ui/ThemeContext";
+import { Sun, Moon } from "lucide-react-native";
 
 export default function Home() {
   const { themeMode, setThemeMode } = useTheme();
@@ -49,11 +50,13 @@ export default function Home() {
               label="Light"
               value={themeMode === "light"}
               onValueChange={() => setThemeMode("light")}
+              icon={<Sun />}
             />
             <RadioButton
               label="Dark"
               value={themeMode === "dark"}
               onValueChange={() => setThemeMode("dark")}
+              icon={<Moon />}
             />
             <RadioButton
               label="System"
