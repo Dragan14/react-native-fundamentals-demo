@@ -5,9 +5,11 @@ import View from "@/components/ui/View";
 import Text from "@/components/ui/Text";
 import Button from "@/components/ui/Button";
 import { useAlert } from "@/context/ui/AlertContext";
+import { useToast } from "@/context/ui/ToastContext";
 
 export default function AlertScreen() {
   const { showAlert, hideAlert } = useAlert();
+  const { showToast } = useToast();
 
   return (
     <SafeAreaView disableTopSafeArea={true}>
@@ -84,7 +86,7 @@ export default function AlertScreen() {
                       }}
                       variant="error"
                     >
-                      Click on the backdrop of this alert to dismiss it
+                      Click the backdrop of this alert to dismiss it
                     </Text>
                   </View>
                 ),
@@ -193,6 +195,32 @@ export default function AlertScreen() {
             }}
           >
             Show Alert with Scroll View
+          </Button>
+          <Button
+            onPress={() => {
+              showAlert({
+                content: (
+                  <View style={{ gap: 10 }}>
+                    <Button
+                      onPress={() =>
+                        showToast({
+                          message: "Top toast",
+                          position: "top",
+                        })
+                      }
+                      variant="primary"
+                    >
+                      Show Top Toast
+                    </Button>
+                    <Button onPress={hideAlert} variant="error">
+                      Close Alert
+                    </Button>
+                  </View>
+                ),
+              });
+            }}
+          >
+            Show alert with a button that triggers a toast
           </Button>
         </View>
       </ScrollView>
